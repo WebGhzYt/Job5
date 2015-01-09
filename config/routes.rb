@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
    resources :users
    resources :profile
-
+   resources :registrations
   root to: 'home#index'
 
   get 'help'    => 'static_pages#help'
