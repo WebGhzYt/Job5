@@ -9,7 +9,7 @@
      
       <%= link_to user.email, profile_path(user) %>
       <% if  @current_user.admin? %>
-    | <%= link_to "delete", profile_path(user) , method: :delete,
+    | <%= link_to "delete", profile_path(user.email) , method: :delete,
                                   data: { confirm: "r you sure?" } %>
   <% end %>
     </li>

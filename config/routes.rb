@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :emps
   devise_for :users
+  resources :registration
    resources :users
    resources :profile
-   resources :registrations
+   
+   resources :vac
   root to: 'home#index'
 
   get 'help'    => 'static_pages#help'
